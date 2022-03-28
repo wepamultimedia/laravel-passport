@@ -3,6 +3,8 @@
 namespace Wepamultimedia\LaravelPassportApi\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Laravel\Passport\PassportServiceProvider;
+
 
 class LaravelPassportApiServiceProvider extends ServiceProvider
 {
@@ -94,6 +96,7 @@ class LaravelPassportApiServiceProvider extends ServiceProvider
      */
     public function register()
     {
+    	$this->register(PassportServiceProvider::class);
         /**
          * Config file
          *
